@@ -3,49 +3,79 @@ import java.util.*;
 public class Main {
 
 	public static void main(String[] args) {
+		Menu myMenu = new Menu();
+		SubMenu mySubMenu = new SubMenu();
+		Shop myShop = new Shop();
+		Item myItem = new Item();
+		Invoice myInovoice = new Invoice();
 		Scanner sc = new Scanner(System.in);
 		
-		boolean mainMenu = true;
+		myMenu.menu();
+		System.out.println("select option: ");
+		int select = sc.nextInt();
 		
-		while (mainMenu) {
-			System.out.println("Main Menu");
-			System.out.println("==============");
-			System.out.println("[1] Shop Settings");
-			System.out.println("[2] Manage Shop Items");
-			System.out.println("[3] Create New Invoice");
-			System.out.println("[4] Report: statistics");
-			System.out.println("[5] Report All Invoice");
-			System.out.println("[6] Search invoice");
-			System.out.println("[7] Program Statistics");
-			System.out.println("[8] Exit");
-			String menu = sc.next();
-			
-			switch (menu) {
-			
-			case "1":
-				boolean case1 = true;
-				while (case1) {
-					System.out.println("[1] Load Data");
-					System.out.println("[2] Set Shop Name");
-					System.out.println("[3] Set Invoice Header");
-					System.out.println("[4] Go Back");
-					int subMenu1 = sc.nextInt();
+		
+		switch (select) {
+		case 1:
+			boolean sMenu1 = true;
+			while (sMenu1) {
+				mySubMenu.subMenu1();
+				System.out.println("select option: ");
+				int option = sc.nextInt();
+				
+				if (option == 1) {
 					
 				}
-			break;
-			case "2":
-				boolean case2 = true;
-				while (case2) {
-					System.out.println("[1] Add Items");
-					System.out.println("[2] Delete Items");
-					System.out.println("[3] Change Item Price");
-					System.out.println("[4] Report All Items");
-					System.out.println("[5] Go Back");
-					int subMenu2 = sc.nextInt();
+				else if (option == 2) {
+					System.out.println("enter shop name :");
+					myShop.shopName = sc.next();
 				}
-			break;	
+				else if (option == 3) {
+					
+				}
 			}
+			
+		break;	
+		case 2:
+			boolean sMenu2 = true;
+			while (sMenu2) {
+				mySubMenu.subMenu2();
+				System.out.println("select option: ");
+				
+			}
+			
+		break;	
+		case 3:
+			
+			
+			
+		break;
+		case 4:
+			
+		break;
+		case 5:
+			
+			
+		break;
+		case 6:
+			
+			
+		break;
+		case 7:
+		
+			
+			
+			
+		break;
+		case 8:
+			
+			
+			
+			
+			
+		break;	
 		}
+			
 
 	}
 

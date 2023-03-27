@@ -1,15 +1,17 @@
 package src;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Invoice {
+public class Invoice implements Serializable {
 
+int invoiceNo;
 String customerName;
 int phoneNo;
 String invoiceDate;
-double noOfItem;
 double total;
-int paidAmount;
-int balance;
+double paidAmount;
+double balance;
 
-ArrayList invoiceList = new ArrayList();
+ArrayList<Item> itemListInvoice = new ArrayList<Item>();
 }
